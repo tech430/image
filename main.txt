@@ -1,0 +1,18 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:student_management/dashboard.dart';
+import 'package:student_management/register.dart';
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: FirebaseOptions(
+      apiKey: "AIzaSyD4E6lN3xGfR1c3xGvAIaQz3ZpoCnrcNZM",
+      appId: "1:88451799253:android:8e4b9b8884a3e90fdcaa5c",
+      messagingSenderId: "",
+      projectId: "stums-70e9b"));
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Dashboard(),
+  ));
+}
+
